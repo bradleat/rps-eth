@@ -12,7 +12,7 @@
     "postinstall": "yarn link rps-config"
   },
   "author": "Bradley Leatherwood",
-  "license": "SEE LICENSE IN license.txt",
+  "license": "SEE LICENSE IN ../LICENSE",
   "devDependencies": {
     "@types/commander": "^2.3.31",
     "@types/node": "^6.0.52",

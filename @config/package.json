@@ -5,7 +5,7 @@
    "main": "./build/index.js",
   "types": "./build/index.d.ts",
   "author": "Bradley Evan Leatherwood",
-  "license": "SEE LICENSE.TXT",
+  "license": "SEE LICENSE IN ../LICENSE",
   "scripts": {
     "build": "tsc",
     "watch": "tsc --watch",

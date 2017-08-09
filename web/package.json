@@ -4,7 +4,7 @@
   "description": "",
   "server": "./build/index.js",
   "author": "Bradley Evan Leatherwood",
-  "license": "SEE LICENSE.TXT",
+  "license": "SEE LICENSE IN ../LICENSE",
   "scripts": {
     "start": "node ./build/index",
     "build": "tsc && yarn build:client-index && yarn build:client-script && yarn build:client-styles",

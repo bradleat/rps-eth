@@ -4,13 +4,14 @@
   "description": "A marketplace to power the local purchase of ethereum",
   "main": "./index.js",
   "author": "Bradley Evan Leatherwood",
-  "license": "SEE LICENSE IN license.txt",
+  "license": "SEE LICENSE IN ../LICENSE",
   "scripts": {
     "build": "truffle compile",
-    "clean": "(rm -rf build/contracts || true) && (mkdir build || true) && mkdir build/contracts",
-    "init-blockchain": "mkdir data && geth --datadir ./data init testing-genesis.json",
+    "deploy": "truffle deploy",
+    "clean-contracts": "(rm -rf build/contracts || true) && (mkdir build || true) && mkdir build/contracts",
+    "init-blockchain": "(mkdir ./data || true) && geth --datadir ./data init testing-genesis.json",
     "clean-blockchain": "rm -rf ./data",
-    "blockchain": "geth --identity \"Loceth Testing\" --rpc --rpcport 8545 --rpccorsdomain \"*\" --datadir ./data --port \"30303\" --nodiscover --rpcapi \"db,eth,net,web3\" --networkid 117 --nat \"any\" --mine --minerthreads=1 --etherbase=0xbe5224FE7e38480a1Bd4DE6706aD6Cf47aF52EC1 console",
+    "blockchain": "geth --identity \"RPS Testing\" --rpc --rpcport 8545 --rpccorsdomain \"*\" --datadir ./data --port \"30303\" --nodiscover --rpcapi \"db,eth,net,web3\" --networkid 117 --nat \"any\" --mine --minerthreads=1 --etherbase=0xbe5224FE7e38480a1Bd4DE6706aD6Cf47aF52EC1 console",
     "test": "truffle test",
     "postinstall": "(yarn unlink || true) && yarn link"
   },

@@ -23,7 +23,8 @@ export async function getContracts(){
 
         const HasherContract = contract(Hasher);
         HasherContract.setProvider(window.web3.currentProvider);
-        const HasherAddress = "0xb2b1c92f73525d467c036a1f4bec146db4e44c1c";
+        // const HasherAddress = "0xb2b1c92f73525d467c036a1f4bec146db4e44c1c";
+        const HasherAddress = Hasher.networks[Object.keys(Hasher.networks)[0]].address;
         const HasherOnChain = await HasherContract.at(HasherAddress);
 
         contracts = {
