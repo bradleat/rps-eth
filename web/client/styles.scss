@@ -1,0 +1,198 @@
+body {
+    margin: 0;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ECF0F1;
+    span.local, span.ether {
+        font-size: 2em;
+    }
+    span.ether {
+        font-weight: bold;
+        padding-left: 0.1em;
+        padding-right: 1em;
+    }
+    div.buttons {
+        display: inline-block;
+        a {
+            font-size: 2em;
+            font-weight: lighter;
+            border: none;
+            padding-right: 0.5em;
+            background: none;
+            cursor: pointer;      
+        }
+    }
+    div.account {
+        line-height: 2em;
+        text-align: bottom;
+        // font-size: 1em;
+    }
+}
+
+div.home-page {
+    margin: 0 auto;
+    width: 63%;
+    text-align: center;
+    h1 {
+        font-weight: normal;
+    }
+    p {
+        font-size: 2em;
+    }
+    button {
+        margin: 0.5em;
+        font-size: 1em;
+        font-weight: lighter;
+        border: 1px solid black;
+        padding-right: 0.5em;
+        background: none;
+        cursor: pointer; 
+    }
+}
+
+div.profile-page {
+    margin: 1.5em;
+    text-align: center;
+    textarea {
+        width: 70%;
+        height: 300px;
+    }
+    button {
+        margin: 0.5em;
+        font-size: 1em;
+        font-weight: lighter;
+        border: 1px solid black;
+        padding-right: 0.5em;
+        background: none;
+        cursor: pointer; 
+    }
+}
+
+div.offer-page {
+    margin: 1.5em;
+    h2 {
+        margin-left: 1em;
+    }
+    div.offer-buttons, div.create-offer {
+        margin: 1em;
+        button {
+            margin: 0.5em;
+            font-size: 1em;
+            font-weight: lighter;
+            border: 1px solid black;
+            padding-right: 0.5em;
+            background: none;
+            cursor: pointer; 
+        }
+    }
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+            cursor: default;
+        }
+    }
+}
+
+div.messages-page {
+    margin: 1.5em;
+    display: flex;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+            cursor: pointer;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+            cursor: default;
+        }
+    }
+    table.thread-list {
+        width: 40%;
+    }
+    div.message-page {
+        width: 60%;
+    }
+    button {
+        margin: 0.5em;
+        font-size: 1em;
+        font-weight: lighter;
+        border: 1px solid black;
+        padding-right: 0.5em;
+        background: none;
+        cursor: pointer; 
+    }
+    textarea {
+        width: 70%;
+        height: 300px;
+    }
+}
+
+div.trades-page {
+    margin: 1.5em;
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        td, th {
+            border: 1px solid #ddd;
+            padding: 0.5em;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+            cursor: default;
+        }
+    }
+    button {
+        margin: 0.5em;
+        font-size: 1em;
+        font-weight: lighter;
+        border: 1px solid black;
+        padding-right: 0.5em;
+        background: none;
+        cursor: pointer; 
+    }
+    button:disabled {
+        cursor: not-allowed;
+    }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "rps-scripts",
+  "version": "0.0.1",
+  "description": "",
+  "main": "./build/main.js",
+  "types": "./build/main.d.ts",
+  "scripts": {
+    "start": "NODE_ENV=dev node ./build/main.js",
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf build",
+    "postinstall": "yarn link rps-config"
+  },
+  "author": "Bradley Leatherwood",
+  "license": "SEE LICENSE IN license.txt",
+  "devDependencies": {
+    "@types/commander": "^2.3.31",
+    "@types/node": "^6.0.52",
+    "tslint": "^5.2.0",
+    "tslint-eslint-rules": "^4.0.0",
+    "typescript": "^2.3.2"
+  },
+  "dependencies": {
+    "commander": "^2.9.0",
+    "readdir": "^0.0.13",
+    "rimraf": "^2.6.0"
+  }
+}

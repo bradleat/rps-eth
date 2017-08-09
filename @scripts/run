@@ -1,0 +1,5 @@
+#!/usr/bin/env node
+process.chdir('../');
+const scripts = require('./build/main');
+
+scripts.main();

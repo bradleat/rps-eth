@@ -1,0 +1,23 @@
+{
+  "name": "rps-config",
+  "version": "0.0.1",
+  "description": "",
+   "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "author": "Bradley Evan Leatherwood",
+  "license": "SEE LICENSE.TXT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "clean": "rm -rf build",
+    "postinstall": "(yarn unlink || true) && yarn link"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@types/node": "^7.0.16",
+    "tslint": "^5.2.0",
+    "tslint-eslint-rules": "^4.0.0",
+    "typescript": "^2.3.4"
+  }
+}

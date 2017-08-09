@@ -1,0 +1,53 @@
+{
+  "name": "rps-web",
+  "version": "0.0.1",
+  "description": "",
+  "server": "./build/index.js",
+  "author": "Bradley Evan Leatherwood",
+  "license": "SEE LICENSE.TXT",
+  "scripts": {
+    "start": "node ./build/index",
+    "build": "tsc && yarn build:client-index && yarn build:client-script && yarn build:client-styles",
+    "build:client-index": "(mkdir build/www || true) && cp client/index.html build/www/index.html",
+    "build:client-styles": "node-sass client/styles.scss -o build/www",
+    "build:client-script": "browserify --debug client/app.tsx -p [tsify] -o build/www/app.js",
+    "watch": "tsc --watch & yarn run watch:client-script & yarn run watch:client-styles",
+    "watch:client-script": "watchify --debug client/app.tsx -p [tsify] -o build/www/app.js",
+    "watch:client-styles": "node-sass client/styles.scss --watch -o build/www",
+    "clean": "rm -rf build",
+    "postinstall": "yarn link rps-config & yarn link rps-blockchain"
+  },
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "es6-promisify": "^5.0.0",
+    "express": "^4.15.3",
+    "morgan": "^1.8.2",
+    "node-forge": "^0.7.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-router-dom": "^4.1.2",
+    "truffle-contract": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/bignumber.js": "^4.0.2",
+    "@types/body-parser": "^1.16.4",
+    "@types/express": "^4.0.36",
+    "@types/morgan": "^1.7.32",
+    "@types/node": "^7.0.16",
+    "@types/node-forge": "^0.6.9",
+    "@types/react": "^16.0.0",
+    "@types/react-dom": "^15.5.2",
+    "@types/react-router-dom": "^4.0.7",
+    "browserify": "^14.4.0",
+    "node-sass": "^4.5.3",
+    "tsify": "^3.0.1",
+    "tslint": "^5.2.0",
+    "tslint-eslint-rules": "^4.0.0",
+    "typescript": "^2.4.2",
+    "watchify": "^3.9.0",
+    "web3-typescript-typings": "^0.3.0"
+  },
+  "port": 8080,
+  "host": "localhost",
+  "protocol": "http"
+}
