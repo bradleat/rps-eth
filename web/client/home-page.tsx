@@ -39,14 +39,21 @@ export default class HomePage extends React.Component<RouteComponentProps<any>, 
     }
     private async update(){
     }
-    static genRandomNumber(min = 0, max = 999999999){
-        return Math.floor(Math.random() * (max - min + 1)) + min;
+    static genRandomNumber(){
+        const randomValues = new Uint8Array(32);
+        crypto.getRandomValues(randomValues);
+        let randomNumber = '';
+        randomValues.forEach((val) => {
+            randomNumber += val.toString(16);
+        });
+        // return window.web3.toHex(randomValues);
+        return `0x${randomNumber}`
     }
     get salt(){
-        return Number(window.localStorage.getItem('salt'));
+        return window.localStorage.getItem('salt');
     }
-    set salt(newSalt: number){
-        window.localStorage.setItem('salt', newSalt.toString());
+    set salt(newSalt: string){
+        window.localStorage.setItem('salt', newSalt);
     }
     get move(){
         return Number(window.localStorage.getItem('move'));
